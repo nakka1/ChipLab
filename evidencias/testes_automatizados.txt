@@ -1,0 +1,10 @@
+PASS test_arithmetic_widths
+PASS test_logic_and_immediates
+PASS test_labels_branches_and_memory
+PASS test_bounded_execution_and_resume
+PASS test_transactional_runtime_errors
+PASS test_assembler_rejections_and_limits
+PASS test_project_roundtrip_and_strict_schema
+PASS test_safe_save_preserves_existing_and_cleans_temporary
+PASS test_verilog_export
+9 grupos, 104 verificacoes: OK

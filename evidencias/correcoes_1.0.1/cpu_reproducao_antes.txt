@@ -1,0 +1,4 @@
+JMP 0: ACCEPTED pc=999 cycles=1 trace=1 R0=0
+JZ R0, 0: ACCEPTED pc=999 cycles=1 trace=1 R0=0
+MOV R0, 1: ACCEPTED pc=1 cycles=1 trace=1 R0=231
+UTF8 BOM: REJECTED Linha 1: instrucao desconhecida '﻿MOV'.

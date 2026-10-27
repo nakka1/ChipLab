@@ -1,0 +1,20 @@
+PASS inicializacao da janela e CPU
+PASS Passo atualiza CPU
+PASS soma completa pela interface
+PASS CSV real com 20 registros e HALT
+PASS CSV escapa virgulas e aspas
+PASS limite 10 com remontagem automatica
+PASS retomada preserva estado apos limite
+PASS limite zero rejeitado sem alterar CPU
+PASS limite 1001 rejeitado sem alterar CPU
+PASS montagem invalida preserva programa e CPU
+PASS fonte valida no teto de 100000 bytes
+PASS editor normaliza CRLF para LF sem crescer fonte
+PASS fonte no teto monta apos normalizacao Win32
+PASS fonte no teto salva e reabre
+PASS configuracao 32 bits e ultimo endereco
+PASS lote de 1000 com temporizador real Win32
+TEMPO_GUI_1000_MS 1339.74
+PASS meta de dois segundos no ambiente de ensaio
+PASS Reiniciar zera estado e rastro
+18 verificacoes de integracao Win32: OK

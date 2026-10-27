@@ -1,0 +1,18 @@
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (1.3s)
+-- Generating done (0.2s)
+-- Build files have been written to: C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/bugfix/build-gcc
+[  8%] Building CXX object CMakeFiles/test_gui_extended.dir/tests/test_gui_extended.cpp.obj
+[ 25%] Building CXX object CMakeFiles/test_gui.dir/tests/test_gui_win32.cpp.obj
+[ 25%] Building CXX object CMakeFiles/ChipLab.dir/src/main.cpp.obj
+[ 33%] Linking CXX executable bin\ChipLab.exe
+[ 41%] Linking CXX executable bin\test_gui.exe
+[ 50%] Linking CXX executable bin\test_gui_extended.exe
+[ 50%] Built target ChipLab
+[ 66%] Built target test_core
+[ 66%] Built target test_gui
+[ 66%] Built target test_gui_extended
+[ 83%] Built target test_cpu_extended
+[100%] Built target test_project_extended

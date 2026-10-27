@@ -1,0 +1,83 @@
+Compilando test_core...
+Compilando test_cpu_extended...
+Compilando test_project_extended...
+Compilando os testes de integracao Win32...
+Compilando a bateria ampliada da interface...
+PASS test_arithmetic_widths
+PASS test_logic_and_immediates
+PASS test_labels_branches_and_memory
+PASS test_bounded_execution_and_resume
+PASS test_transactional_runtime_errors
+PASS test_assembler_rejections_and_limits
+PASS test_project_roundtrip_and_strict_schema
+PASS test_safe_save_preserves_existing_and_cleans_temporary
+PASS test_verilog_export
+9 grupos, 104 verificacoes: OK
+PASS architecture_boundaries scenarios=162
+PASS seeded_differential_programs scenarios=270
+PASS seeded_arithmetic_aliases scenarios=768
+PASS branches_and_step_resume scenarios=8
+PASS text_and_program_limits scenarios=28
+PASS constructor_revalidates_manual_program scenarios=3
+PASS corrupted_runtime_state_is_transactional scenarios=22
+7 groups; 1261 deterministic scenarios; 1318 assertions; 7880 independently compared CPU steps: OK
+DONE architecture names and UTF-8
+DONE strict schema and JSON syntax
+DONE boundaries, paths, atomic save and I/O
+Concurrent save attempts: 53 succeeded, 19 safe I/O rejections
+DONE binary exports and 72 concurrent saves
+DONE 12000 parser mutations and 100 draft roundtrips
+12325 checks; 0 failures
+PASS inicializacao da janela e CPU
+PASS Passo atualiza CPU
+PASS soma completa pela interface
+PASS CSV real com 20 registros e HALT
+PASS CSV escapa virgulas e aspas
+EVIDENCE_DIR C:\Users\alexa\Documents\Codex\2026-10-26\vamos-executar-a-1-etapa-do\work\bugfix\script path spaces\test-evidence
+PASS limite 10 com remontagem automatica
+PASS retomada preserva estado apos limite
+PASS limite zero rejeitado sem alterar CPU
+PASS limite 1001 rejeitado sem alterar CPU
+PASS montagem invalida preserva programa e CPU
+PASS fonte valida no teto de 100000 bytes
+PASS editor normaliza CRLF para LF sem crescer fonte
+PASS fonte no teto monta apos normalizacao Win32
+PASS fonte no teto salva e reabre
+PASS configuracao 32 bits e ultimo endereco
+PASS lote de 1000 com temporizador real Win32
+TEMPO_GUI_1000_MS 1391.68
+BENCHMARK_META_2000_MS ATENDIDA
+PASS Reiniciar zera estado e rastro
+17 verificacoes de integracao Win32: OK
+EVIDENCE_DIR C:\Users\alexa\Documents\Codex\2026-10-26\vamos-executar-a-1-etapa-do\work\bugfix\script path spaces\test-evidence\gui-extended
+PASS nome com 60 caracteres Unicode nao e cortado em 30
+PASS 61 caracteres rejeitados em vez de truncados para 60
+PASS surrogate alto isolado rejeitado sem substituir texto
+PASS surrogate baixo isolado rejeitado sem substituir texto
+PASS Unicode valido preserva ida e volta
+PASS colagem real preserva 100000 bytes apos CRLF do controle
+PASS fonte colada no teto monta com HALT
+PASS 100001 bytes rejeitados sem descartar o programa valido
+PASS erro de tamanho preserva a montagem anterior
+PASS parada atualiza o painel de execucao
+PASS parada restaura botoes corretos
+PASS entrada 10000 nao e truncada para 1000
+PASS entrada 10000 e rejeitada pelo limite de execucao
+PASS limite invalido preserva CPU e parada
+PASS tratamento de erro nao falha por mensagem fora de UTF8
+PASS arquitetura invalida rejeitada antes de alterar controles
+PASS carregamento invalido preserva interface e CPU
+PASS fonte NUL rejeitada antes de alterar controles
+PASS fonte NUL nao e cortada silenciosamente no editor
+PASS exportacao suporta caminho Unicode
+PASS arquivo de exportacao bloqueado para ensaio
+PASS falha na exportacao preserva o arquivo anterior
+PASS leitura aceita exatamente 1 MiB
+PASS leitura rejeita 1 MiB mais 1 sem alocacao ilimitada
+PASS leitura de arquivo ausente devolve erro controlado
+PASS programa BOM executa pela interface
+PASS BOM nao contamina instrucao no rastro CSV
+PASS exportacao sem passos informa ausencia de rastro
+PASS Passo apos HALT nao duplica rastro
+29 verificacoes estendidas Win32: OK
+Testes concluidos com sucesso.

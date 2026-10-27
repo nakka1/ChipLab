@@ -1,0 +1,8 @@
+PASS architecture_boundaries scenarios=162
+PASS seeded_differential_programs scenarios=270
+PASS seeded_arithmetic_aliases scenarios=768
+PASS branches_and_step_resume scenarios=8
+PASS text_and_program_limits scenarios=28
+PASS constructor_revalidates_manual_program scenarios=3
+PASS corrupted_runtime_state_is_transactional scenarios=22
+7 groups; 1261 deterministic scenarios; 1318 assertions; 7880 independently compared CPU steps: OK

@@ -1,0 +1,15 @@
+Test project C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/bugfix/build-gcc
+    Start 1: gui_win32
+1/5 Test #1: gui_win32 ........................   Passed    1.91 sec
+    Start 2: gui_extended
+2/5 Test #2: gui_extended .....................   Passed    0.51 sec
+    Start 3: core
+3/5 Test #3: core .............................   Passed    0.16 sec
+    Start 4: cpu_extended
+4/5 Test #4: cpu_extended .....................   Passed    0.10 sec
+    Start 5: project_extended
+5/5 Test #5: project_extended .................   Passed    4.98 sec
+
+100% tests passed, 0 tests failed out of 5
+
+Total Test time (real) =   7.68 sec

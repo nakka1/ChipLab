@@ -1,0 +1,19 @@
+**********************************************************************
+** Visual Studio 2026 Developer Command Prompt v18.11.0
+** Copyright (c) 2026 Microsoft Corporation
+**********************************************************************
+[vcvarsall.bat] Environment initialized for: 'x64'
+-- Configuring done (0.2s)
+-- Generating done (0.2s)
+-- Build files have been written to: C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/bugfix/build-msvc
+[ 50%] Building CXX object CMakeFiles/test_gui_extended.dir/tests/test_gui_extended.cpp.obj
+test_gui_extended.cpp
+[100%] Linking CXX executable bin\test_gui_extended.exe
+[100%] Built target test_gui_extended
+Test project C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/bugfix/build-msvc
+    Start 2: gui_extended
+1/1 Test #2: gui_extended .....................   Passed    0.74 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.98 sec

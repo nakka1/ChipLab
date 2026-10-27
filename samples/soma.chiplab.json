@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "architecture": {
+    "name": "CPU didática",
+    "bits": 8,
+    "registers": 8,
+    "memory_size": 64
+  },
+  "source": "; Soma de 1 a 5: resultado 15 na memória[0].\nMOV R0, 5\nMOV R1, 0\nloop: ADD R1, R1, R0\nADDI R0, R0, -1\nJNZ R0, loop\nSTORE R1, 0\nLOAD R2, 0\nHALT\n"
+}

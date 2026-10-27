@@ -1,0 +1,31 @@
+EVIDENCE_DIR work\bugfix\gui-evidence
+PASS nome com 60 caracteres Unicode nao e cortado em 30
+PASS 61 caracteres rejeitados em vez de truncados para 60
+PASS surrogate alto isolado rejeitado sem substituir texto
+PASS surrogate baixo isolado rejeitado sem substituir texto
+PASS Unicode valido preserva ida e volta
+PASS colagem real preserva 100000 bytes apos CRLF do controle
+PASS fonte colada no teto monta com HALT
+PASS 100001 bytes rejeitados sem descartar o programa valido
+PASS erro de tamanho preserva a montagem anterior
+PASS parada atualiza o painel de execucao
+PASS parada restaura botoes corretos
+PASS entrada 10000 nao e truncada para 1000
+PASS entrada 10000 e rejeitada pelo limite de execucao
+PASS limite invalido preserva CPU e parada
+PASS tratamento de erro nao falha por mensagem fora de UTF8
+PASS arquitetura invalida rejeitada antes de alterar controles
+PASS carregamento invalido preserva interface e CPU
+PASS fonte NUL rejeitada antes de alterar controles
+PASS fonte NUL nao e cortada silenciosamente no editor
+PASS exportacao suporta caminho Unicode
+PASS arquivo de exportacao bloqueado para ensaio
+PASS falha na exportacao preserva o arquivo anterior
+PASS leitura aceita exatamente 1 MiB
+PASS leitura rejeita 1 MiB mais 1 sem alocacao ilimitada
+PASS leitura de arquivo ausente devolve erro controlado
+PASS programa BOM executa pela interface
+PASS BOM nao contamina instrucao no rastro CSV
+PASS exportacao sem passos informa ausencia de rastro
+PASS Passo apos HALT nao duplica rastro
+29 verificacoes estendidas Win32: OK

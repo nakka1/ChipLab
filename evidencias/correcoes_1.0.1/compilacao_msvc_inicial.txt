@@ -1,0 +1,37 @@
+**********************************************************************
+** Visual Studio 2026 Developer Command Prompt v18.11.0
+** Copyright (c) 2026 Microsoft Corporation
+**********************************************************************
+[vcvarsall.bat] Environment initialized for: 'x64'
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - not found
+-- Found Threads: TRUE
+-- Configuring done (1.8s)
+-- Generating done (0.2s)
+-- Build files have been written to: C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/bugfix/build-msvc
+[  8%] Building CXX object CMakeFiles/ChipLab.dir/src/main.cpp.obj
+main.cpp
+[ 16%] Linking CXX executable bin\ChipLab.exe
+[ 16%] Built target ChipLab
+[ 25%] Building CXX object CMakeFiles/test_gui.dir/tests/test_gui_win32.cpp.obj
+test_gui_win32.cpp
+[ 33%] Linking CXX executable bin\test_gui.exe
+[ 33%] Built target test_gui
+[ 41%] Building CXX object CMakeFiles/test_gui_extended.dir/tests/test_gui_extended.cpp.obj
+test_gui_extended.cpp
+C:\Users\alexa\Documents\Codex\2026-10-26\vamos-executar-a-1-etapa-do\outputs\ChipLab\tests\test_gui_extended.cpp(42): warning C4310: cast truncates constant value
+[ 50%] Linking CXX executable bin\test_gui_extended.exe
+[ 50%] Built target test_gui_extended
+[ 66%] Built target test_core
+[ 75%] Building CXX object CMakeFiles/test_cpu_extended.dir/tests/test_cpu_extended.cpp.obj
+test_cpu_extended.cpp
+[ 83%] Linking CXX executable bin\test_cpu_extended.exe
+[ 83%] Built target test_cpu_extended
+[ 91%] Building CXX object CMakeFiles/test_project_extended.dir/tests/test_project_extended.cpp.obj
+test_project_extended.cpp
+[100%] Linking CXX executable bin\test_project_extended.exe
+[100%] Built target test_project_extended

@@ -1,0 +1,4 @@
+JMP 0: REJECTED Estado interno inconsistente. Monte o programa novamente.
+JZ R0, 0: REJECTED Estado interno inconsistente. Monte o programa novamente.
+MOV R0, 1: REJECTED Estado interno inconsistente. Monte o programa novamente.
+UTF8 BOM: ACCEPTED

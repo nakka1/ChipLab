@@ -1,0 +1,7 @@
+DONE architecture names and UTF-8
+DONE strict schema and JSON syntax
+DONE boundaries, paths, atomic save and I/O
+Concurrent save attempts: 54 succeeded, 18 safe I/O rejections
+DONE binary exports and 72 concurrent saves
+DONE 12000 parser mutations and 100 draft roundtrips
+12325 checks; 0 failures
