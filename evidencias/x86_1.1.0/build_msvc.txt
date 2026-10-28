@@ -1,0 +1,57 @@
+**********************************************************************
+** Visual Studio 2026 Developer Command Prompt v18.11.0
+** Copyright (c) 2026 Microsoft Corporation
+**********************************************************************
+[vcvarsall.bat] Environment initialized for: 'x64'
+[  6%] Building CXX object CMakeFiles/ChipLab.dir/src/main.cpp.obj
+main.cpp
+C:\Users\alexa\Documents\Codex\2026-10-26\vamos-executar-a-1-etapa-do\outputs\ChipLab\third_party\include\unicorn\platform.h(219): warning C4505: 'usleep': unreferenced function with internal linkage has been removed
+[ 12%] Linking CXX executable bin\ChipLab.exe
+Copying bundled NASM, Unicorn and Capstone runtime
+[ 12%] Built target ChipLab
+[ 18%] Building CXX object CMakeFiles/test_gui.dir/tests/test_gui_win32.cpp.obj
+test_gui_win32.cpp
+C:\Users\alexa\Documents\Codex\2026-10-26\vamos-executar-a-1-etapa-do\outputs\ChipLab\third_party\include\unicorn\platform.h(219): warning C4505: 'usleep': unreferenced function with internal linkage has been removed
+[ 25%] Linking CXX executable bin\test_gui.exe
+Copying bundled NASM, Unicorn and Capstone runtime
+[ 25%] Built target test_gui
+[ 31%] Building CXX object CMakeFiles/test_gui_extended.dir/tests/test_gui_extended.cpp.obj
+test_gui_extended.cpp
+C:\Users\alexa\Documents\Codex\2026-10-26\vamos-executar-a-1-etapa-do\outputs\ChipLab\third_party\include\unicorn\platform.h(219): warning C4505: 'usleep': unreferenced function with internal linkage has been removed
+[ 37%] Linking CXX executable bin\test_gui_extended.exe
+Copying bundled NASM, Unicorn and Capstone runtime
+[ 37%] Built target test_gui_extended
+[ 43%] Building CXX object CMakeFiles/test_x86.dir/tests/test_x86.cpp.obj
+test_x86.cpp
+C:\Users\alexa\Documents\Codex\2026-10-26\vamos-executar-a-1-etapa-do\outputs\ChipLab\third_party\include\unicorn\platform.h(219): warning C4505: 'usleep': unreferenced function with internal linkage has been removed
+[ 50%] Linking CXX executable bin\test_x86.exe
+Copying bundled NASM, Unicorn and Capstone runtime
+[ 50%] Built target test_x86
+[ 56%] Building CXX object CMakeFiles/test_gui_x86.dir/tests/test_gui_x86.cpp.obj
+test_gui_x86.cpp
+C:\Users\alexa\Documents\Codex\2026-10-26\vamos-executar-a-1-etapa-do\outputs\ChipLab\third_party\include\unicorn\platform.h(219): warning C4505: 'usleep': unreferenced function with internal linkage has been removed
+[ 62%] Linking CXX executable bin\test_gui_x86.exe
+Copying bundled NASM, Unicorn and Capstone runtime
+[ 62%] Built target test_gui_x86
+[ 75%] Built target test_core
+[ 87%] Built target test_cpu_extended
+[100%] Built target test_project_extended
+Test project C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/x86_tests/msvc
+    Start 1: gui_win32
+1/7 Test #1: gui_win32 ........................   Passed    1.84 sec
+    Start 2: gui_extended
+2/7 Test #2: gui_extended .....................   Passed    0.64 sec
+    Start 3: x86_native
+3/7 Test #3: x86_native .......................   Passed    1.89 sec
+    Start 4: gui_x86
+4/7 Test #4: gui_x86 ..........................   Passed    2.51 sec
+    Start 5: core
+5/7 Test #5: core .............................   Passed    0.16 sec
+    Start 6: cpu_extended
+6/7 Test #6: cpu_extended .....................   Passed    0.11 sec
+    Start 7: project_extended
+7/7 Test #7: project_extended .................   Passed    6.76 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =  14.15 sec

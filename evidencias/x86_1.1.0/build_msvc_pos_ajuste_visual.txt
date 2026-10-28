@@ -1,0 +1,40 @@
+**********************************************************************
+** Visual Studio 2026 Developer Command Prompt v18.11.0
+** Copyright (c) 2026 Microsoft Corporation
+**********************************************************************
+[vcvarsall.bat] Environment initialized for: 'x64'
+[ 50%] Building CXX object CMakeFiles/ChipLab.dir/src/main.cpp.obj
+main.cpp
+C:\Users\alexa\Documents\Codex\2026-10-26\vamos-executar-a-1-etapa-do\outputs\ChipLab\third_party\include\unicorn\platform.h(219): warning C4505: 'usleep': unreferenced function with internal linkage has been removed
+[100%] Linking CXX executable bin\ChipLab.exe
+Copying bundled NASM, Unicorn and Capstone runtime
+[100%] Built target ChipLab
+[ 50%] Building CXX object CMakeFiles/test_gui.dir/tests/test_gui_win32.cpp.obj
+test_gui_win32.cpp
+C:\Users\alexa\Documents\Codex\2026-10-26\vamos-executar-a-1-etapa-do\outputs\ChipLab\third_party\include\unicorn\platform.h(219): warning C4505: 'usleep': unreferenced function with internal linkage has been removed
+[100%] Linking CXX executable bin\test_gui.exe
+Copying bundled NASM, Unicorn and Capstone runtime
+[100%] Built target test_gui
+[ 50%] Building CXX object CMakeFiles/test_gui_extended.dir/tests/test_gui_extended.cpp.obj
+test_gui_extended.cpp
+C:\Users\alexa\Documents\Codex\2026-10-26\vamos-executar-a-1-etapa-do\outputs\ChipLab\third_party\include\unicorn\platform.h(219): warning C4505: 'usleep': unreferenced function with internal linkage has been removed
+[100%] Linking CXX executable bin\test_gui_extended.exe
+Copying bundled NASM, Unicorn and Capstone runtime
+[100%] Built target test_gui_extended
+[ 50%] Building CXX object CMakeFiles/test_gui_x86.dir/tests/test_gui_x86.cpp.obj
+test_gui_x86.cpp
+C:\Users\alexa\Documents\Codex\2026-10-26\vamos-executar-a-1-etapa-do\outputs\ChipLab\third_party\include\unicorn\platform.h(219): warning C4505: 'usleep': unreferenced function with internal linkage has been removed
+[100%] Linking CXX executable bin\test_gui_x86.exe
+Copying bundled NASM, Unicorn and Capstone runtime
+[100%] Built target test_gui_x86
+Test project C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/x86_tests/msvc
+    Start 1: gui_win32
+1/3 Test #1: gui_win32 ........................   Passed    1.78 sec
+    Start 2: gui_extended
+2/3 Test #2: gui_extended .....................   Passed    0.50 sec
+    Start 4: gui_x86
+3/3 Test #4: gui_x86 ..........................   Passed    2.42 sec
+
+100% tests passed, 0 tests failed out of 3
+
+Total Test time (real) =   4.84 sec

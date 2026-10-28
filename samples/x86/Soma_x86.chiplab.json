@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "mode": "x86-32",
+  "name": "Soma x86 Intel NASM",
+  "source": "; ChipLab x86-32 / NASM: EAX = 15 e resultado = 15.\nbits 32\nglobal _start\n\nsection .text\n_start:\n    xor eax, eax\n    mov ecx, 5\n.somar:\n    add eax, ecx\n    dec ecx\n    jnz .somar\n    mov [resultado], eax\n    hlt\n\nsection .data\nresultado dd 0\n"
+}

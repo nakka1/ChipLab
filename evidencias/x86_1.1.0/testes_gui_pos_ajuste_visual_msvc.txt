@@ -1,0 +1,128 @@
+Start testing: Oct 28 00:10 Bahia Standard Time
+----------------------------------------------------------
+1/7 Testing: gui_win32
+1/7 Test: gui_win32
+Command: "C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/x86_tests/msvc/bin/test_gui.exe" "--evidence-dir" "C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/x86_tests/msvc/test-evidence"
+Directory: C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/x86_tests/msvc
+"gui_win32" start time: Oct 28 00:10 Bahia Standard Time
+Output:
+----------------------------------------------------------
+PASS inicializacao da janela e CPU
+PASS Passo atualiza CPU
+PASS soma completa pela interface
+PASS CSV real com 20 registros e HALT
+PASS CSV escapa virgulas e aspas
+EVIDENCE_DIR C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/x86_tests/msvc/test-evidence
+PASS limite 10 com remontagem automatica
+PASS retomada preserva estado apos limite
+PASS limite zero rejeitado sem alterar CPU
+PASS limite 1001 rejeitado sem alterar CPU
+PASS montagem invalida preserva programa e CPU
+PASS fonte valida no teto de 100000 bytes
+PASS editor normaliza CRLF para LF sem crescer fonte
+PASS fonte no teto monta apos normalizacao Win32
+PASS fonte no teto salva e reabre
+PASS configuracao 32 bits e ultimo endereco
+PASS lote de 1000 com temporizador real Win32
+TEMPO_GUI_1000_MS 1364.77
+BENCHMARK_META_2000_MS ATENDIDA
+PASS Reiniciar zera estado e rastro
+17 verificacoes de integracao Win32: OK
+<end of output>
+Test time =   1.78 sec
+----------------------------------------------------------
+Test Passed.
+"gui_win32" end time: Oct 28 00:10 Bahia Standard Time
+"gui_win32" time elapsed: 00:00:01
+----------------------------------------------------------
+
+2/7 Testing: gui_extended
+2/7 Test: gui_extended
+Command: "C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/x86_tests/msvc/bin/test_gui_extended.exe" "--evidence-dir" "C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/x86_tests/msvc/test-evidence/gui-extended"
+Directory: C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/x86_tests/msvc
+"gui_extended" start time: Oct 28 00:10 Bahia Standard Time
+Output:
+----------------------------------------------------------
+EVIDENCE_DIR C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/x86_tests/msvc/test-evidence/gui-extended
+PASS nome com 60 caracteres Unicode nao e cortado em 30
+PASS 61 caracteres rejeitados em vez de truncados para 60
+PASS surrogate alto isolado rejeitado sem substituir texto
+PASS surrogate baixo isolado rejeitado sem substituir texto
+PASS Unicode valido preserva ida e volta
+PASS colagem real preserva 100000 bytes apos CRLF do controle
+PASS fonte colada no teto monta com HALT
+PASS 100001 bytes rejeitados sem descartar o programa valido
+PASS erro de tamanho preserva a montagem anterior
+PASS parada atualiza o painel de execucao
+PASS parada restaura botoes corretos
+PASS entrada 10000 nao e truncada para 1000
+PASS entrada 10000 e rejeitada pelo limite de execucao
+PASS limite invalido preserva CPU e parada
+PASS tratamento de erro nao falha por mensagem fora de UTF8
+PASS arquitetura invalida rejeitada antes de alterar controles
+PASS carregamento invalido preserva interface e CPU
+PASS fonte NUL rejeitada antes de alterar controles
+PASS fonte NUL nao e cortada silenciosamente no editor
+PASS exportacao suporta caminho Unicode
+PASS arquivo de exportacao bloqueado para ensaio
+PASS falha na exportacao preserva o arquivo anterior
+PASS leitura aceita exatamente 1 MiB
+PASS leitura rejeita 1 MiB mais 1 sem alocacao ilimitada
+PASS leitura de arquivo ausente devolve erro controlado
+PASS programa BOM executa pela interface
+PASS BOM nao contamina instrucao no rastro CSV
+PASS exportacao sem passos informa ausencia de rastro
+PASS Passo apos HALT nao duplica rastro
+29 verificacoes estendidas Win32: OK
+<end of output>
+Test time =   0.50 sec
+----------------------------------------------------------
+Test Passed.
+"gui_extended" end time: Oct 28 00:10 Bahia Standard Time
+"gui_extended" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/7 Testing: gui_x86
+4/7 Test: gui_x86
+Command: "C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/x86_tests/msvc/bin/test_gui_x86.exe" "--evidence-dir" "C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/x86_tests/msvc/test-evidence/gui-x86"
+Directory: C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/x86_tests/msvc
+"gui_x86" start time: Oct 28 00:10 Bahia Standard Time
+Output:
+----------------------------------------------------------
+EVIDENCE_DIR C:/Users/alexa/Documents/Codex/2026-10-26/vamos-executar-a-1-etapa-do/work/x86_tests/msvc/test-evidence/gui-x86
+PASS legacy mode still initializes without x86 runtime loading
+PASS default x86 example selected by mode switch assembles and sums to 15
+PASS switching ISA preserves custom editor text
+PASS x86 fixes architecture controls
+PASS didactic ULA export disabled for x86
+PASS returning to didactic restores architecture selection
+PASS x86 project initializes separate native CPU
+PASS table shows real x86 register names
+PASS Passo executes real x86 arithmetic
+PASS panel displays real EIP and overflow flag
+PASS trace renders machine bytes alongside Intel assembly
+PASS Executar reaches HLT with four native instructions
+PASS memory table renders byte addresses and little-endian value
+PASS memory view clamps length at last mapped byte
+PASS memory view rejects address after mapped region
+PASS invalid memory address preserves prior view
+PASS CSV exports x86 trace rather than legacy CPU
+PASS Passo after HLT does not duplicate native trace
+PASS invalid NASM input raises controlled assembly error
+PASS invalid assembly preserves prior native CPU state
+PASS int80 output reaches visible console control
+PASS GUI budget stops looping native program normally
+PASS GUI resumes native EIP without remounting
+PASS Reiniciar remount clears CPU trace and console
+PASS didactic execution works after multiple native projects
+PASS legacy architecture and ULA export restored
+26 x86 Win32 integration assertions: OK
+<end of output>
+Test time =   2.42 sec
+----------------------------------------------------------
+Test Passed.
+"gui_x86" end time: Oct 28 00:10 Bahia Standard Time
+"gui_x86" time elapsed: 00:00:02
+----------------------------------------------------------
+
+End testing: Oct 28 00:10 Bahia Standard Time

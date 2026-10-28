@@ -1,0 +1,18 @@
+ChipLab 1.1.0 - verificacao do pacote extraido em pasta nova
+
+PASS: ZIP integra e contem executavel, quatro arquivos runtime, fontes,
+cabecalhos, exemplos, documentacao, licencas e fonte correspondente Unicorn.
+PASS: projeto Soma_x86.chiplab.json reconhecido como esquema 2 / x86-32.
+PASS: montagem NASM e execucao Unicorn/Capstone com os arquivos runtime extraidos.
+PASS: soma termina com EAX=15, HLT e 19 instrucoes concluidas.
+PASS: ola.asm gera exatamente Ola do ChipLab! seguido de LF e sys_exit(0).
+PASS: ChipLab.exe extraido inicia a interface Win32 a partir de outro diretorio
+de trabalho, sem recompilacao ou download.
+PASS: imports diretos do aplicativo restritos a bibliotecas Windows/UCRT;
+compilacao GCC usa runtime C++ estatico.
+
+SHA256 do executavel distribuido:
+c34570ae6df124e11330e474e71140fe3016a1a8c7540348eb9e8945dec67bda
+
+O ZIP foi regenerado depois destas verificacoes apenas para incluir este
+registro e seu link no relatorio; o executavel e o runtime permaneceram iguais.

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(ChipLab VERSION 1.0.1 LANGUAGES CXX)
+project(ChipLab VERSION 1.1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -10,6 +10,7 @@ foreach(config DEBUG RELEASE RELWITHDEBINFO MINSIZEREL)
 endforeach()
 
 function(chiplab_compiler_options target)
+  target_include_directories(${target} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/third_party/include")
   if(MSVC)
     target_compile_options(${target} PRIVATE /W4 /utf-8)
     set_property(TARGET ${target} PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
@@ -21,9 +22,19 @@ function(chiplab_compiler_options target)
   endif()
 endfunction()
 
+function(chiplab_runtime target)
+  add_custom_command(TARGET ${target} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+      "${CMAKE_CURRENT_SOURCE_DIR}/runtime" "$<TARGET_FILE_DIR:${target}>/runtime"
+    COMMENT "Copying bundled NASM, Unicorn and Capstone runtime")
+endfunction()
+
 enable_testing()
 
 if(WIN32)
+  if(NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
+    message(FATAL_ERROR "ChipLab x86 mode requires a 64-bit Windows C++ toolchain for the bundled runtime.")
+  endif()
   add_executable(ChipLab WIN32 src/main.cpp)
   target_compile_definitions(ChipLab PRIVATE UNICODE _UNICODE NOMINMAX)
   target_link_libraries(ChipLab PRIVATE comctl32 comdlg32 gdi32 user32 shell32)
@@ -31,11 +42,13 @@ if(WIN32)
     target_link_options(ChipLab PRIVATE -municode)
   endif()
   chiplab_compiler_options(ChipLab)
+  chiplab_runtime(ChipLab)
 
   add_executable(test_gui tests/test_gui_win32.cpp)
   target_compile_definitions(test_gui PRIVATE UNICODE _UNICODE NOMINMAX)
   target_link_libraries(test_gui PRIVATE comctl32 comdlg32 gdi32 user32 shell32)
   chiplab_compiler_options(test_gui)
+  chiplab_runtime(test_gui)
   add_test(NAME gui_win32 COMMAND test_gui --evidence-dir "${CMAKE_BINARY_DIR}/test-evidence")
   set_tests_properties(gui_win32 PROPERTIES WORKING_DIRECTORY "${CMAKE_BINARY_DIR}" TIMEOUT 60)
 
@@ -43,8 +56,23 @@ if(WIN32)
   target_compile_definitions(test_gui_extended PRIVATE UNICODE _UNICODE NOMINMAX)
   target_link_libraries(test_gui_extended PRIVATE comctl32 comdlg32 gdi32 user32 shell32)
   chiplab_compiler_options(test_gui_extended)
+  chiplab_runtime(test_gui_extended)
   add_test(NAME gui_extended COMMAND test_gui_extended --evidence-dir "${CMAKE_BINARY_DIR}/test-evidence/gui-extended")
   set_tests_properties(gui_extended PROPERTIES WORKING_DIRECTORY "${CMAKE_BINARY_DIR}" TIMEOUT 60)
+
+  add_executable(test_x86 tests/test_x86.cpp)
+  chiplab_compiler_options(test_x86)
+  chiplab_runtime(test_x86)
+  add_test(NAME x86_native COMMAND test_x86)
+  set_tests_properties(x86_native PROPERTIES WORKING_DIRECTORY "${CMAKE_BINARY_DIR}" TIMEOUT 120)
+
+  add_executable(test_gui_x86 tests/test_gui_x86.cpp)
+  target_compile_definitions(test_gui_x86 PRIVATE UNICODE _UNICODE NOMINMAX)
+  target_link_libraries(test_gui_x86 PRIVATE comctl32 comdlg32 gdi32 user32 shell32)
+  chiplab_compiler_options(test_gui_x86)
+  chiplab_runtime(test_gui_x86)
+  add_test(NAME gui_x86 COMMAND test_gui_x86 --evidence-dir "${CMAKE_BINARY_DIR}/test-evidence/gui-x86")
+  set_tests_properties(gui_x86 PROPERTIES WORKING_DIRECTORY "${CMAKE_BINARY_DIR}" TIMEOUT 120)
 endif()
 
 foreach(suite core cpu_extended project_extended)

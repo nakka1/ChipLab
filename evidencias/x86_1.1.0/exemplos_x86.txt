@@ -1,0 +1,6 @@
+PASS native sample flags.asm EAX=0 entry=1000 instructions=9
+PASS native sample macros.asm EAX=14 entry=1003 instructions=6
+PASS native sample memoria.asm EAX=10 entry=1000 instructions=6
+PASS native sample ola.asm EAX=1 entry=1000 instructions=8
+PASS native sample pilha.asm EAX=12 entry=1000 instructions=8
+PASS native sample soma.asm EAX=15 entry=1000 instructions=19

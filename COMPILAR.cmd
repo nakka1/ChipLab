@@ -1,6 +1,7 @@
 @echo off
 setlocal EnableExtensions DisableDelayedExpansion
 cd /d "%~dp0"
+for %%F in (nasm.exe unicorn.dll capstone.dll vcruntime140.dll) do if not exist "%~dp0runtime\%%F" goto missing_runtime
 
 set "CHIPLAB_GXX="
 where /q g++.exe
@@ -9,7 +10,7 @@ if not defined CHIPLAB_GXX if exist "C:\msys64\ucrt64\bin\g++.exe" set "CHIPLAB_
 if not defined CHIPLAB_GXX goto cmake_build
 
 echo Compilando o aplicativo nativo ChipLab com GCC...
-"%CHIPLAB_GXX%" -std=c++17 -O2 -Wall -Wextra -finput-charset=UTF-8 -DUNICODE -D_UNICODE -DNOMINMAX -static -static-libgcc -static-libstdc++ -municode -mwindows "src\main.cpp" -o "ChipLab.exe" -lcomctl32 -lcomdlg32 -lgdi32 -luser32 -lshell32
+"%CHIPLAB_GXX%" -std=c++17 -O2 -Wall -Wextra -finput-charset=UTF-8 -I"third_party\include" -DUNICODE -D_UNICODE -DNOMINMAX -static -static-libgcc -static-libstdc++ -municode -mwindows "src\main.cpp" -o "ChipLab.exe" -lcomctl32 -lcomdlg32 -lgdi32 -luser32 -lshell32
 if errorlevel 1 goto build_failed
 echo Pronto: %~dp0ChipLab.exe
 exit /b 0
@@ -33,6 +34,10 @@ exit /b 0
 :missing_compiler
 echo Nao foi encontrado g++ nem CMake. Instale um compilador C++17 para recompilar.
 echo O arquivo ChipLab.exe fornecido pode ser aberto diretamente, sem recompilar.
+exit /b 1
+
+:missing_runtime
+echo A pasta runtime esta incompleta. Mantenha nasm.exe, unicorn.dll, capstone.dll e vcruntime140.dll junto com o projeto.
 exit /b 1
 
 :build_failed

@@ -1,0 +1,25 @@
+ChipLab 1.1.0 - validacao final
+Data: 28/10/2026 - America/Bahia
+1) Backend congelado: sete suites completas aprovadas nos dois compiladores.
+GCC 13.2.0: CMake Release, 7/7 suites, 14,54 s.
+MSVC 19.51.36260.0: CMake Release, 7/7 suites, 14,15 s.
+Contagens por compilador: core 104; cpu_extended 1318; project_extended 12325; gui_win32 17; gui_extended 29; x86_native 59; gui_x86 26.
+Total de verificacoes contabilizadas nessa execucao: 13878 por compilador (inclui entradas JSON geradas; nao representa 13878 funcionalidades distintas).
+Seis exemplos x86 executados pelo backend final: flags, macros, memoria, ola, pilha e soma.
+
+2) Ajuste visual posterior somente em main.cpp: larguras das colunas de registradores e titulo Dec. na memoria x86.
+Aplicativo Release e tres suites GUI recompilados nos dois toolchains.
+GCC: 3/3 suites GUI novamente aprovadas, 4,61 s.
+MSVC: 3/3 suites GUI novamente aprovadas, 4,84 s.
+Repeticao: gui_win32 17 + gui_extended 29 + gui_x86 26 = 72 verificacoes por compilador. Essas repeticoes nao foram somadas ao total de 13878.
+Suites do nucleo nao foram repetidas apos o ajuste visual, pois seus fontes nao foram alterados.
+
+Aplicativos finais Release compilados: work/x86_tests/cmake-gcc/bin/ChipLab.exe e work/x86_tests/msvc/bin/ChipLab.exe.
+Runtime app-local confirmado: NASM, Unicorn, Capstone e vcruntime140.dll.
+SHA256 dos fontes e aplicativos finais:
+3C42293E25A9BE4A899BD0008C91875FE0804EC9DB1F94580E2BC91C1CB2A4AE outputs/ChipLab/src/main.cpp
+9A51900626D8D6C1C77CAEBD3C65FEBE83AE170810378A3CB346593F150601C2 outputs/ChipLab/src/x86.hpp
+B69953237B8AF05AC6B26EF1C2FAE4BCA09FCB75A58BE24931D1ACC906A8A69A outputs/ChipLab/tests/test_x86.cpp
+4BBA517F5E2C59787DC902FD53FACFC2AA86924FEBDD9EE63326F02D6F6D328B outputs/ChipLab/tests/test_gui_x86.cpp
+C34570AE6DF124E11330E474E71140FE3016A1A8C7540348EB9E8945DEC67BDA work/x86_tests/cmake-gcc/bin/ChipLab.exe
+AB2B7689CA0444EC4454DB1A82D7E113540AB12EA2D2FBB2AE618B8C6DBC1DAB work/x86_tests/msvc/bin/ChipLab.exe
